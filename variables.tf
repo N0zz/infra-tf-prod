@@ -1,3 +1,7 @@
+variable "environment" {
+    type = string
+    default = "prod"
+}
 variable "uptimerobot_alert_email" {
     type = string
     default = "k.kolodziejczyk3+prod@gmail.com"
