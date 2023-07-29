@@ -1,3 +1,2 @@
 provider "uptimerobot" {}
-
 provider "ovh" {}

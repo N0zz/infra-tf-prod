@@ -1,6 +1,5 @@
 module "ovh" {
     source = "git@github.com:N0zz/infra-tfmod-ovh.git?ref=main"
-
     dns_records = var.dns_records
 }
 module "uptimerobot" {
