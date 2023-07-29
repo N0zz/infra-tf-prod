@@ -31,7 +31,7 @@ variable "dns_records" {
             subdomain = "www"
             fieldtype = "CNAME"
             ttl       = "300"
-            target    = "temida-czestochowa.pl"
+            target    = ""
         }
     }
 }
