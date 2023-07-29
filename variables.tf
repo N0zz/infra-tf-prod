@@ -5,9 +5,16 @@ variable "uptimerobot_alert_email" {
 variable "dns_records" {
     type = map
     default = {
-        test_kris_ovh = {
+        kris_ovh = {
             zone      = "kris.ovh"
             subdomain = ""
+            fieldtype = "A"
+            ttl       = "300"
+            target    = "130.61.139.21"
+        },
+        asterisk_kris_ovh = {
+            zone      = "kris.ovh"
+            subdomain = "*"
             fieldtype = "A"
             ttl       = "300"
             target    = "130.61.139.21"
