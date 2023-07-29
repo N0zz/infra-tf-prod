@@ -15,9 +15,9 @@ variable "dns_records" {
         asterisk_kris_ovh = {
             zone      = "kris.ovh"
             subdomain = "*"
-            fieldtype = "A"
+            fieldtype = "CNAME"
             ttl       = "300"
-            target    = "130.61.139.21"
+            target    = "kris.ovh"
         },
         temida_czestochowa_pl = {
             zone      = "temida-czestochowa.pl"
@@ -29,9 +29,9 @@ variable "dns_records" {
         www_temida_czestochowa_pl = {
             zone      = "temida-czestochowa.pl"
             subdomain = "www"
-            fieldtype = "A"
+            fieldtype = "CNAME"
             ttl       = "300"
-            target    = "130.61.139.21"
+            target    = "temida-czestochowa.pl"
         }
     }
 }
