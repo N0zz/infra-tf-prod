@@ -1,3 +1,6 @@
+locals {
+    target_ip = "130.61.139.21"
+}
 variable "uptimerobot_alert_email" {
     type = string
     default = "k.kolodziejczyk3+prod@gmail.com"
@@ -10,7 +13,7 @@ variable "dns_records" {
             subdomain = ""
             fieldtype = "A"
             ttl       = "300"
-            target    = "130.61.139.21"
+            target    = local.target_ip
         },
         asterisk_kris_ovh = {
             zone      = "kris.ovh"
@@ -24,14 +27,14 @@ variable "dns_records" {
             subdomain = ""
             fieldtype = "A"
             ttl       = "300"
-            target    = "130.61.139.21"
+            target    = local.target_ip
         },
         www_temida_czestochowa_pl = {
             zone      = "temida-czestochowa.pl"
             subdomain = "www"
             fieldtype = "A"
             ttl       = "300"
-            target    = "130.61.139.21"
+            target    = local.target_ip
         }
     }
 }
