@@ -25,14 +25,14 @@ variable "dns_records" {
             fieldtype = "A"
             ttl       = "300"
             target    = "130.61.139.21"
-        },
-        www_temida_czestochowa_pl = {
-            zone      = "temida-czestochowa.pl"
-            subdomain = "www"
-            fieldtype = "CNAME"
-            ttl       = "300"
-            target    = "temida-czestochowa.pl"
         }
+        # www_temida_czestochowa_pl = {
+        #     zone      = "temida-czestochowa.pl"
+        #     subdomain = "www"
+        #     fieldtype = "CNAME"
+        #     ttl       = "300"
+        #     target    = "temida-czestochowa.pl"
+        # }
     }
 }
 
