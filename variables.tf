@@ -1,4 +1,4 @@
-variable "environment" {
+variable "infra_environment" {
   type    = string
   default = "prod"
 }
