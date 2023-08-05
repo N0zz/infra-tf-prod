@@ -23,13 +23,15 @@ variable "dns_records" {
       ttl       = "3600"
       target    = "kris.ovh."
     },
-    kris_ovh_caa = {
-      zone      = "kris.ovh"
-      subdomain = ""
-      fieldtype = "CAA"
-      ttl       = "3600"
-      target    = "128 issue letsencrypt.org"
-    },
+    # Provider doesn't seem to support CAA records format?
+    # │ Error: Failed to create OVH Record: OVHcloud API error (status code 400): "Invalid CAA target. Required format is: flags tag \"value\""
+    # kris_ovh_caa = {
+    #   zone      = "kris.ovh"
+    #   subdomain = ""
+    #   fieldtype = "CAA"
+    #   ttl       = "3600"
+    #   target    = "letsencrypt.org"
+    # },
     temida_czestochowa_pl = {
       zone      = "temida-czestochowa.pl"
       subdomain = ""
