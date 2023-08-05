@@ -28,7 +28,7 @@ variable "dns_records" {
       subdomain = ""
       fieldtype = "CAA"
       ttl       = "3600"
-      target    = "letsencrypt.org"
+      target    = "128 issue letsencrypt.org"
     },
     temida_czestochowa_pl = {
       zone      = "temida-czestochowa.pl"
