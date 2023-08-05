@@ -13,29 +13,36 @@ variable "dns_records" {
       zone      = "kris.ovh"
       subdomain = ""
       fieldtype = "A"
-      ttl       = "300"
+      ttl       = "3600"
       target    = "130.61.139.21"
     },
     asterisk_kris_ovh = {
       zone      = "kris.ovh"
       subdomain = "*"
       fieldtype = "CNAME"
-      ttl       = "300"
-      target    = "kris.ovh"
+      ttl       = "3600"
+      target    = "kris.ovh."
+    },
+    kris_ovh_caa = {
+      zone      = "kris.ovh"
+      subdomain = ""
+      fieldtype = "CAA"
+      ttl       = "3600"
+      target    = "letsencrypt.org"
     },
     temida_czestochowa_pl = {
       zone      = "temida-czestochowa.pl"
       subdomain = ""
       fieldtype = "A"
-      ttl       = "300"
+      ttl       = "3600"
       target    = "130.61.139.21"
     },
     www_temida_czestochowa_pl = {
       zone      = "temida-czestochowa.pl"
       subdomain = "www"
-      fieldtype = "A"
-      ttl       = "300"
-      target    = "130.61.139.21"
+      fieldtype = "CNAME"
+      ttl       = "3600"
+      target    = "temida-czestochowa.pl."
     }
   }
 }
